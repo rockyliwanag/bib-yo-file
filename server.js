@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const session = require('express-session');
 
 //load the env vars
 require('dotenv').config();
@@ -24,6 +25,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: 'StudioRock',
+  resave: false,
+  saveUninitiatialized: true
+}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
