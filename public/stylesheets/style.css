@@ -1,8 +1,44 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.nav-wrapper {
+  display: flex;
+  background-color: rgb(102, 125, 132);
+  margin: 0px;
 }
 
 a {
   color: #00B7FF;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 400px;
+  object-fit: contain;
+  margin-left: 2rem;
+  margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth {
+  margin-right: 2rem;
+  align-self: flex-end;
+}
+
+.card .card-content .card-title {
+  margin-bottom: 10px;
+}
+
+#search-row form {
+  padding-top: 20px;
 }
