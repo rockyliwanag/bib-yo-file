@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bib.lio.file</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="" class="brand-logo"><img src="images/logo.svg" class="logo"></a>
+                <ul>
+                    <li class="right">
+                        <% if (user) { %>
+                        <a href="/logout" class="auth">Log Out</a>
+                        <% } else { %>
+                        <a href="/auth/google" class="auth">Login</a>
+                        <% } %>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>

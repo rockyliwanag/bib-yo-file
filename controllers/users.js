@@ -13,7 +13,8 @@ function index(req, res, next) {
         res.render('users/index', {
             users,
             name: req.query.name,
-            user: req.user
+            user: req.user,
+            books
             // sortKey: sortKey
         });
     });

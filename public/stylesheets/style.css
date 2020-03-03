@@ -32,7 +32,7 @@ ul {
 
 .auth {
   margin-right: 2rem;
-  align-self: flex-end;
+  align-items: flex-end;
 }
 
 .card .card-content .card-title {
@@ -41,4 +41,31 @@ ul {
 
 #search-row form {
   padding-top: 20px;
+}
+
+#book-list-wrapper {
+  padding: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.hero-title {
+  align-self: center;
+}
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: repeat(2, minmax(100px, 200px)); */
+  gap: 1rem;
+  grid-auto-flow: row;
+}
+
+.book {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14rem;
 }
