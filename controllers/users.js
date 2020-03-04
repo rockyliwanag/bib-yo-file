@@ -14,8 +14,11 @@ function index(req, res, next) {
             users,
             name: req.query.name,
             user: req.user,
-            books
+            // books
             // sortKey: sortKey
         });
     });
+    // User.find({}, function(err, users) {
+    //     res.render('users/index', {title: 'All Books', users});
+    // });
 }
