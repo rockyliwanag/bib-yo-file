@@ -3,7 +3,7 @@ var router = express.Router();
 const passport = require('passport');
 
 router.get('/', function(req, res) {
-  res.redirect('/users');
+  res.render('users/index');
 });
 
 router.get('/auth/google', passport.authenticate(
@@ -14,19 +14,27 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/users',
-    failureRedirect: '/users'
+    successRedirect: '/',
+    failureRedirect: '/'
   }
 ));
 
 router.get('/logout', function(req, res) {
   req.logout();
-  res.redirect('/users');
+  res.redirect('/');
 });
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
 //   res.render('index', { title: 'Express' });
+// });
+
+// res.render('users/index', { //points to view/users/index
+//   users,
+//   name: req.query.name,
+//   user: req.user,
+//   // books
+//   // sortKey: sortKey
 // });
 
 module.exports = router;
