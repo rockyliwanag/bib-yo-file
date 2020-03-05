@@ -10,10 +10,10 @@ function index(req, res, next) {
     User.find(modelQuery)
     .sort(sortKey).exec(function(err, users) {
         if (err) return next(err);
-        res.render('users/users', { //points to view/users/index
-            users,
-            name: req.query.name,
-            user: req.user,
+        res.render('users/users', { 
+            // users,
+            // name: req.query.name,
+            // user: req.user,
             // books
             // sortKey: sortKey
         });

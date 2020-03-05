@@ -1,10 +1,17 @@
 var express = require('express');
 var router = express.Router();
 const passport = require('passport');
+const indexCtrl = require('../controllers/books');
 
-router.get('/', function(req, res) {
-  res.render('users/index');
-});
+// router.get('/', function index(req, res) {
+//   Book.find({}, function (err, book) {
+//     res.render('users/index', {
+//       book
+//     });
+//   });
+// });
+
+router.get('/', indexCtrl.index);
 
 router.get('/auth/google', passport.authenticate(
   'google',

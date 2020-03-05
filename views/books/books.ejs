@@ -17,7 +17,7 @@
                     <li class="right">
                         <% if (user) { %>
                         <a href="/" class="auth">Home</a>
-                        <a href="/profile" class="auth">Profile</a>
+                        <a href="/users" class="auth">Profile</a>
                         <a href="/logout" class="auth">Log Out</a>
                         <% } else { %>
                         <a href="/auth/google" class="auth">Login</a>
@@ -31,7 +31,7 @@
 
 <!-- < % if (user._id.equals(user && user._id)) { %> -->
     <div>
-        <form id="new-book" action="/users" method="POST">
+        <form id="new-book" action="/books" method="POST">
             <label>Title:</label>
             <input type="text" name="title">
             <label>Author:</label>

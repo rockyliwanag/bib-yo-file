@@ -4,12 +4,9 @@
         <h1 class="hero-title">Book List</h1>
         <h2>Fiction:</h2>
         <div class="books-container">
-            <!-- < % books.forEach(b => { %> -->
-                
-                
-                <a href="" class="book"> <!--< %= b.title %>--> </a>
-                <a href="" class="book">2</a>
-            <!-- < % }); %>  -->
+          <% books.forEach(function(b) { %> 
+                <a href="" class="book"> <%= b.title %> </a>
+            <% }); %>
                     
         </div>
         <h2>Non-Fiction:</h2>
