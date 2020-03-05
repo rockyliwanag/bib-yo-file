@@ -63,9 +63,15 @@ ul {
 }
 
 .book {
-  background-color: red;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 14rem;
+}
+
+.images {
+  border: 1.5px solid black;
+  width: 150px;
+  height: auto;
 }
