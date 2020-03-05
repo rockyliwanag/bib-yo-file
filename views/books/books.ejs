@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bib.lio.file</title>
-    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 
 <body>
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="/" class="brand-logo"><img src="images/logo.svg" class="logo"></a>
+                <a href="/" class="brand-logo"><img src="/images/logo.svg" class="logo"></a>
                 <ul>
                     <li class="right">
                         <% if (user) { %>
@@ -27,23 +27,44 @@
             </div>
         </nav>
     </div>
-<h1>New Book</h1>
+    <div id="form-wrapper">
+        <h1 class="hero-title">Add New Review</h1>
+        <!-- < % if (user._id.equals(user && user._id)) { %> -->
+            <div id="new-book-wrapper">
+                <div id="book-search-wrapper">
+                    <div>Search for Books</div>
+                </div>
+                
+                <form id="new-book" action="/books" method="POST">
+                    <div class="hero-title">Add Book</div>
+                    <label>Title:</label>
+                    <input type="text" name="title">
+                    <label>Author:</label>
+                    <input type="text" name="author">
+                    <label>Category:</label>
+                    <input type="text" name="category">
+                    <label for="img">Cover Art:</label>
+                    <input type="file" id="img" name="img" accept="image/*">
+                    <input type="submit" value="Add Book">
+                </form>
+            </div>
+            <div id="new-review-wrapper">
+                <div>New Review:</div>
+                <form id="new-review" action="/reviews" method="POST"></form>
+                <label for="heading">Heading</label>
+                <input type="text" name="heading">
+                <label for="review">Review</label>
+                <input type="text" name="review">
+                <input type="submit" value="Add Review">
 
-<!-- < % if (user._id.equals(user && user._id)) { %> -->
-    <div>
-        <form id="new-book" action="/books" method="POST">
-            <label>Title:</label>
-            <input type="text" name="title">
-            <label>Author:</label>
-            <input type="text" name="author">
-            <label>Category:</label>
-            <input type="text" name="category">
-            <label for="img">Cover Art:</label>
-            <input type="file" id="img" name="img" accept="image/*">
-            <input type="submit" value="Add Book">
-        </form>
-    </div> 
 
+            </div> 
+    </div>
+		<footer class="clearfix">
+		    <p class="copyright">Copyright 2020</p>
+		    <p class="message">Created with &hearts; by <span class="name">StudioRock</span></p>
+		</footer>
    </body>
 
    </html>
+

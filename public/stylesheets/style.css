@@ -11,8 +11,16 @@ body {
 }
 
 a {
-  /* color: #00B7FF; */
+  color: rgb(231, 231, 231);
   text-decoration: none;
+}
+
+a:visited {
+  color: rgb(231, 231, 231);
+}
+
+a:active {
+  color: black;
 }
 
 .brand-logo {
@@ -26,9 +34,12 @@ ul {
   list-style-type: none;
 }
 
+
 .right {
   display: flex;
   flex-direction: row;
+  padding-top: 4rem;
+  font-size: 18px;
 }
 
 .auth {
@@ -100,6 +111,16 @@ ul {
 #main-profile {
   border-radius: 50%;
   width: 200px;
+  border: 1.3px solid #0D2C40;
+}
+
+#profile-name {
+  font-size: x-large;
+  margin-bottom: 0px;
+}
+
+#profile-email {
+  font-size: large;
 }
 
 #review-header {
@@ -113,13 +134,41 @@ ul {
   align-self: flex-end;
 }
 
+#form-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 #add-review {
   display: flex;
   border: 2px solid black;
   align-items: center;
   padding: .7rem;
   border-radius: 1rem;
+  color: black;
+}
 
+#new-book-wrapper {
+  display: flex;
+  border: 2px solid red;
+
+}
+
+#new-review-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid yellow;
+}
+
+#book-search-wrapper {
+  width: 600px;
+}
+
+#new-book {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
 }
 
 footer {
@@ -146,6 +195,10 @@ footer {
 
 .name {
   color: #F15B31;
+}
+
+.book-properties {
+  color: #0D2C40;
 }
 
 .clearfix:after {
