@@ -1,6 +1,7 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px Helvetica, Arial, sans-serif;
   margin: 0;
+  background-color: #e0e4f2;
 }
 
 .nav-wrapper {
@@ -10,7 +11,7 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  /* color: #00B7FF; */
   text-decoration: none;
 }
 
@@ -48,10 +49,20 @@ ul {
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
+  height: 100vh;
+}
+
+.page-wrapper {
+  padding: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  height: 100vh;
 }
 
 .hero-title {
   align-self: center;
+  text-decoration: underline;
 }
 
 .books-container {
@@ -74,4 +85,74 @@ ul {
   border: 1.5px solid black;
   width: 150px;
   height: auto;
+}
+
+#profile-wrapper{
+  display: flex;
+  padding: 2rem;
+  border-bottom: 2px solid black;
+}
+
+#profile-content {
+  margin: 2rem;
+}
+
+#main-profile {
+  border-radius: 50%;
+  width: 200px;
+}
+
+#review-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  align-items: baseline;
+}
+
+#my-reviews {
+  align-self: flex-end;
+}
+
+#add-review {
+  display: flex;
+  border: 2px solid black;
+  align-items: center;
+  padding: .7rem;
+  border-radius: 1rem;
+
+}
+
+footer {
+  text-transform: uppercase;
+  padding: 0 20px;
+  background-color: #0D2C40;
+  color: white;
+  font-size: 14px;
+  letter-spacing: .08em;
+  font-weight: 500;
+  position: sticky;
+  bottom: 0;
+}
+
+.copyright {
+  font-family: "Raleway", sans-serif;
+  float: left;
+}
+
+.message {
+  font-family: "Raleway", sans-serif;
+  float: right;
+}
+
+.name {
+  color: #F15B31;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+  height: 0;
+  font-size: 0;
 }

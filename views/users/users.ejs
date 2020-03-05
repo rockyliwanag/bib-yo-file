@@ -1,7 +1,26 @@
 <%- include('../partials/header.ejs') %>
 
-<h1>User Profile</h1>
+<div class="page-wrapper">
+    <h1 class="hero-title">User Profile</h1>
+    <div id="profile-wrapper">
+        <% users.forEach(function(u){ %>
+            <% if (u._id.equals(user && user._id)) { %>
+            <img id="main-profile" src="<%= u.avatar %> ">
+            <div id="profile-content">
+                <h3><%= u.name %> </h3>
+                <h3><%= u.email %> </h3>
+                <h3> Books reviewed: </h3>
+            </div>
+        <% }; %>
+        <% }); %> 
+    </div>
+<div id="review-header">
+    <h2 id="my-reviews">My Reviews:</h2>
+    <a id="add-review" href="/books/new">Add New Review</a>
+</div>
 
-<a href="/books/new">Add New Review</a>
+
+</div>
+
 
 <%- include('../partials/footer.ejs') %>
