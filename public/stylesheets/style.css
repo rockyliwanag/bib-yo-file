@@ -98,6 +98,19 @@ ul {
   height: auto;
 }
 
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* grid-template-rows: repeat(2, minmax(100px, 200px)); */
+  gap: 1rem;
+  grid-auto-flow: row;
+  
+}
+
+.review-entry {
+border: 2px solid pink;
+}
+
 #profile-wrapper{
   display: flex;
   padding: 2rem;
