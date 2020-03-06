@@ -32,21 +32,7 @@
         <!-- < % if (user._id.equals(user && user._id)) { %> -->
             <div id="new-book-wrapper">
                 <div id="book-search-wrapper">
-                    <div>Search for Books</div>
-                    <form action="">
-                        <input type="text" name="search">
-                        <input type="submit" value="Search">
-                    </form>
-                    <div>
-                        <h3>Result:</h3>
-                        <% books.forEach(function(b)) { %>
-                        <form action="">
-                            <div><input type="radio">Book 1</div>
-                            <div><input type="radio">Book 2</div>
-                        </form>
-                    </div>
-                </div>
-                    <% } %>
+
                 <form id="new-book" action="/entries" method="POST">
                     <div class="hero-title">Add Book</div>
                     <label>Title:</label>
@@ -56,21 +42,11 @@
                     <label>Category:</label>
                     <input type="text" name="category">
                     <label for="img">Cover Art:</label>
-                    <input type="file" id="img" name="img" accept="image/*">
+                    <input type="text" name="img" placeholder="Add image link" value="/images/placeholder.png">
                     <input type="submit" value="Add Book">
                 </form>
             </div>
-            <div id="new-review-wrapper">
-                <div>New Review:</div>
-                <form id="new-review" action="/entries" method="POST"></form>
-                <label for="heading">Heading</label>
-                <input type="text" name="heading">
-                <label for="review">Review</label>
-                <input type="text" name="review">
-                <input type="submit" value="Add Review">
 
-
-            </div> 
     </div>
 		<footer class="clearfix">
 		    <p class="copyright">Copyright 2020</p>

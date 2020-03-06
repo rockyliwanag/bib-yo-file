@@ -108,7 +108,7 @@ ul {
 }
 
 .review-entry {
-border: 2px solid pink;
+border: 2px solid rgb(39, 39, 39);
 }
 
 #profile-wrapper{
@@ -156,7 +156,6 @@ border: 2px solid pink;
 #details-button {
   display: flex;
   flex-direction: row;
-  border: 2px solid #ff0000;
   justify-content: right;
 }
 
@@ -172,13 +171,11 @@ border: 2px solid pink;
 
 #new-book-wrapper {
   display: flex;
-  border: 2px solid red;
 }
 
 #new-review-wrapper {
   display: flex;
   flex-direction: column;
-  border: 2px solid yellow;
 }
 
 #book-search-wrapper {

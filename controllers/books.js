@@ -1,6 +1,6 @@
 const Book = require('../models/book');
 const User = require('../models/user');
-const Review = require('../models/review');
+
 
 
 module.exports = {
@@ -21,6 +21,7 @@ function index(req, res) {
 
 function newBook(req, res) {
     User.findById(req.user.id, (err, user) => {
+        console.log('Who is?', user);
     res.render('books/books', {user});
     });
 }
@@ -33,21 +34,21 @@ function create(req, res) {
     });
 }
 
-function show(req, res) {
-    Book.findById(req.params.id)
-        .populate('cast').exec(function (err, books) {
-            Review.find({
-                _id: {
-                    // $nin: books.review
-                }
-            }, function (err, reviews) {
-                res.render('books/show', {
-                    title: 'Book Detail',
-                    books,
-                    reviews
-                });
-            });
-        });
+// function show(req, res) {
+//     Book.findById(req.params.id, (err, book) => {
+//         res.render('books/show', {
+//             title: 'Book Detail',
+//             books
+//         }
+//     });   
+// }
+
+function show(req,res) {
+    Book.findById(req.params.id, function(err, books) {
+        res.render('books/show', {
+            books
+        })
+    });
 }
 
 function edit(req, res) {
