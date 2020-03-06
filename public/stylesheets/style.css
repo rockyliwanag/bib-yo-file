@@ -171,6 +171,8 @@ border: 2px solid rgb(39, 39, 39);
 
 #new-book-wrapper {
   display: flex;
+  padding: 2rem;
+  
 }
 
 #new-review-wrapper {
@@ -185,6 +187,8 @@ border: 2px solid rgb(39, 39, 39);
 #new-book {
   display: flex;
   flex-direction: column;
+  align-self: center;
+  width: 600px;
   /* border: 2px solid red; */
 }
 
@@ -225,4 +229,9 @@ footer {
   clear: both;
   height: 0;
   font-size: 0;
+}
+
+#show-page {
+  height: 100vh;
+  padding: 2rem;
 }

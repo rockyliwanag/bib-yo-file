@@ -1,9 +1,9 @@
 <%- include('../partials/header.ejs') %>
 
-<h1>Book Details</h1>
-
+<h1 class="hero-title">Book Details</h1>
 
 <section id="show-page">
+<div >
     <div>
         <img src="/images/placeholder.png" class="images">
     </div>
@@ -15,49 +15,50 @@
         <div>Category: </div>
         <div><%= books.category %></div>
     </div>
-<div id="details-button">
-    <a class="button" href="/entries/<%= books._id %>/edit">Edit Book</a>
-    <form action="/entries/<%= books._id %>?_method=DELETE" method="POST">
-        <button class="button" type="submit">Delete Book</button>
-    </form>
-</div>
-<!-- < % if (books.reviews.length) { %> -->
-    <h1>Book Reviews:</h1>
-    <!-- < % let total = 0 %>-->
-    <% books.reviews.forEach(function(r) { %>
-
-    <!-- < % total += r.rating %> -->
-
-    <div class="reviews-container">
-        <!-- < % reviews.forEach(function(r) { %> -->
-        <div class="review-entry">
-            <div><%= r.heading %></div>
-            <div><%= r.review %></div>
-            <div><%= r.rating %></div>
-        </div>
+    <div id="details-button">
+        <a class="button" href="/entries/<%= books._id %>/edit">Edit Book</a>
+        <form action="/entries/<%= books._id %>?_method=DELETE" method="POST">
+            <button class="button" type="submit">Delete Book</button>
+        </form>
     </div>
-    <!-- < % }); %> -->
-
-<%}) %>
-
-            <div id="new-review-wrapper">
-                <div>New Review:</div>
-                <form id="new-review" action="/entries/<%= books._id %>/reviews" method="POST">
-                    <label for="heading">Heading</label>
-                    <input type="text" name="heading">
-                    <label for="review">Review</label>
-                    <textarea name="review"></textarea>
-                    <label for="rating">Rating</label>
-                    <select name="rating">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <input type="submit" value="Add Review">
-                </form>
+    <!-- < % if (books.reviews.length) { %> -->
+        <h1>Book Reviews:</h1>
+        <!-- < % let total = 0 %>-->
+        <% books.reviews.forEach(function(r) { %>
+    
+        <!-- < % total += r.rating %> -->
+    
+        <div class="reviews-container">
+            <!-- < % reviews.forEach(function(r) { %> -->
+            <div class="review-entry">
+                <div><%= r.heading %></div>
+                <div><%= r.review %></div>
+                <div><%= r.rating %></div>
             </div>
-
+        </div>
+        <!-- < % }); %> -->
+    
+    <%}) %>
+    
+                <div id="new-review-wrapper">
+                    <div>New Review:</div>
+                    <form id="new-review" action="/entries/<%= books._id %>/reviews" method="POST">
+                        <label for="heading">Heading</label>
+                        <input type="text" name="heading">
+                        <label for="review">Review</label>
+                        <textarea name="review"></textarea>
+                        <label for="rating">Rating</label>
+                        <select name="rating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <input type="submit" value="Add Review">
+                    </form>
+                </div>
+    </section>
+</div>
 
 <%- include('../partials/footer.ejs') %>

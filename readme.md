@@ -13,8 +13,8 @@ Bib.Lio.File is a book club for bookworms. It allows visitors to view a collecti
 ## Technologies Used
 
 * HTML
-* Javascript
 * CSS
+* Javascript
 * EJS
 * MongoDB/Mongoose
 * Express.JS
@@ -34,6 +34,8 @@ Here is a Heroku link to the app and Trello board for my planning: [bib.lio.file
 3. Search function for existing books to add reviews.
 
 4. Be able to borrow books from user to user.
+
+5. Add function for users to upload book cover art.
 
 
 
