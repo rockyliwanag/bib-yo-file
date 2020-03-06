@@ -6,19 +6,12 @@
         <br>
         <div class="books-container">
           <% books.forEach(function(b) { %>
-
-
-            <div class="book">
-                <!-- < % b.coverArt === '' ? <img src="/images/placeholder.png" class="images"> : <img src="/images/placeholder.png" class="images">  %> -->
-                
+            <div class="book">                
                 <a href="/entries/<%= b._id %>"><img src="/images/placeholder.png" class="images"></a>
                 <%= b.title %>
-
             </div> 
-            <% }); %>
-                    
+            <% }); %>           
         </div>
-
     </div>
 
 <%- include('../partials/footer.ejs') %>

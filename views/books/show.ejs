@@ -21,25 +21,16 @@
             <button class="button" type="submit">Delete Book</button>
         </form>
     </div>
-    <!-- < % if (books.reviews.length) { %> -->
         <h1>Book Reviews:</h1>
-        <!-- < % let total = 0 %>-->
         <% books.reviews.forEach(function(r) { %>
-    
-        <!-- < % total += r.rating %> -->
-    
         <div class="reviews-container">
-            <!-- < % reviews.forEach(function(r) { %> -->
             <div class="review-entry">
                 <div><%= r.heading %></div>
                 <div><%= r.review %></div>
                 <div><%= r.rating %></div>
             </div>
-        </div>
-        <!-- < % }); %> -->
-    
-    <%}) %>
-    
+        </div>    
+    <%}) %> 
                 <div id="new-review-wrapper">
                     <div>New Review:</div>
                     <form id="new-review" action="/entries/<%= books._id %>/reviews" method="POST">

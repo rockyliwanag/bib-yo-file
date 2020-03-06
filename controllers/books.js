@@ -21,7 +21,6 @@ function index(req, res) {
 
 function newBook(req, res) {
     User.findById(req.user.id, (err, user) => {
-        console.log('Who is?', user);
     res.render('books/books', {user});
     });
 }
@@ -30,18 +29,9 @@ function create(req, res) {
     const book = new Book(req.body);
     book.save(function(err) {
         if(err) return alert(err);
-        res.redirect('/entries/new');
+        res.redirect('/');
     });
 }
-
-// function show(req, res) {
-//     Book.findById(req.params.id, (err, book) => {
-//         res.render('books/show', {
-//             title: 'Book Detail',
-//             books
-//         }
-//     });   
-// }
 
 function show(req,res) {
     Book.findById(req.params.id, function(err, books) {
@@ -61,7 +51,6 @@ function update(req, res) {
     Book.findByIdAndUpdate(req.params.id, req.body, {
         new: true
     }, function (err, book) { 
-        if(err) console.log('WHY ISNT IT WORKING', err)
         res.redirect(`/entries/${book._id}`);
     });
 }
@@ -69,7 +58,6 @@ function update(req, res) {
 function deleteBook(req, res) {
     Book.findById((req.params.id), function(err, book) {
         book.deleteOne(function (err){
-            console.log('Its not deleting');
             res.redirect('/entries');
         });
     });
