@@ -1,10 +1,14 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
     name: String,
     email: String,
     avatar: String,
-    // favoriteBooks: [],
+    reviews: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Review'
+    }],
     googleId: String
 }, {
     timestamps: true

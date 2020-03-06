@@ -11,12 +11,10 @@ const reviewSchema = new Schema({
     },
     rating: {
         type: Number,
+        min: 1,
+        max: 5,
         default: 5
-    },
-    writtenBy: [{
-        type: Schema.Types.ObjectId,
-        ref: 'user'
-    }]
+    }
 }, {
     timestamps: true
 });

@@ -1,10 +1,13 @@
 const Book = require('../models/book');
 const User = require('../models/user');
+const Review = require('../models/review')
+
 
 module.exports = {
     index,
     new: newBook,
-    create
+    create,
+    show
 };
 
 function index(req, res) {
@@ -15,18 +18,33 @@ function index(req, res) {
 
 function newBook(req, res) {
     User.findById(req.user.id, (err, user) => {
-    res.render('books/books', {user}); //change to users/new after rendering profile
+    res.render('books/books', {user});
     });
 }
 
 function create(req, res) {
     const book = new Book(req.body);
     book.save(function(err) {
-        console.log(err);
-        console.log(book);
-        // if(err) return alert(err);
-        res.redirect('/');
+        if(err) return alert(err);
+        res.redirect('/entries/new');
     });
+}
+
+function show(req, res) {
+    Book.findById(req.params.id)
+        .populate('cast').exec(function (err, books) {
+            Review.find({
+                _id: {
+                    // $nin: books.review
+                }
+            }, function (err, reviews) {
+                res.render('books/show', {
+                    title: 'Book Detail',
+                    books,
+                    reviews
+                });
+            });
+        });
 }
 
 

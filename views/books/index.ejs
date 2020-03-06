@@ -10,8 +10,8 @@
 
             <div class="book">
                 <!-- < % b.coverArt === '' ? <img src="/images/placeholder.png" class="images"> : <img src="/images/placeholder.png" class="images">  %> -->
-                <img src="/images/placeholder.png" class="images">
-                <a class="book-properties" href=""> <%= b.title %> </a>
+                <a href="/entries/<%= b._id %>"><img src="/images/placeholder.png" class="images"></a>
+                <%= b.title %>
 
             </div> 
             <% }); %>
