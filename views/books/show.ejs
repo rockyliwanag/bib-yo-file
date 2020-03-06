@@ -2,6 +2,7 @@
 
 <h1>Book Details</h1>
 
+
 <section id="show-page">
     <div>
         <img src="/images/placeholder.png" class="images">
@@ -14,10 +15,16 @@
         <div>Category: </div>
         <div><%= books.category %></div>
     </div>
+<div id="details-button">
+    <a class="button" href="/entries/<%= books._id %>/edit">Edit Book</a>
+    <form class="button" action="/entries/<%= books._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Book</button>
+    </form>
+</div>
     <h1>Book Reviews:</h1>
     <div class="reviews-container">
+        <!-- < % reviews.forEach(function(r) { %> -->
         <div class="review-entry">review 1</div>
-        <div class="review-entry">review 2</div>
     </div>
 
 

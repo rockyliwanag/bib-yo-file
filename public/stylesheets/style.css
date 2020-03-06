@@ -153,13 +153,21 @@ border: 2px solid pink;
   height: 100vh;
 }
 
-#add-review {
+#details-button {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #ff0000;
+  justify-content: right;
+}
+
+.button {
   display: flex;
   border: 2px solid black;
   align-items: center;
   padding: .7rem;
   border-radius: 1rem;
   color: black;
+  
 }
 
 #new-book-wrapper {

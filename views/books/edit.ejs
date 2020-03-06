@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bib.lio.file</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo"><img src="/images/logo.svg" class="logo"></a>
+                <ul>
+                    <li class="right">
+                        <% if (user) { %>
+                        <a href="/" class="auth">Home</a>
+                        <a href="/users" class="auth">Profile</a>
+                        <a href="/logout" class="auth">Log Out</a>
+                        <% } else { %>
+                        <a href="/auth/google" class="auth">Login</a>
+                        <% } %>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="form-wrapper">
+        <h1 class="hero-title">Edit Book</h1>
+        <div>
+
+            <form id="new-book" action="/entries/<%= book._id %>?_method=PUT" method="POST">
+
+                <label>Title:</label>
+                <input type="text" name="title">
+                <label>Author:</label>
+                <input type="text" name="author">
+                <label>Category:</label>
+                <input type="text" name="category">
+                <label for="img">Cover Art:</label>
+                <input type="file" id="img" name="img" accept="image/*">
+                <input type="submit" value="Add Book">
+            </form>
+        </div>
+    </div>
+    <footer class="clearfix">
+        <p class="copyright">Copyright 2020</p>
+        <p class="message">Created with &hearts; by <span class="name">StudioRock</span></p>
+    </footer>
+</body>
+
+</html>

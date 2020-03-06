@@ -1,5 +1,32 @@
-<%- include('../partials/header.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bib.lio.file</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo"><img src="/images/logo.svg" class="logo"></a>
+                <ul>
+                    <li class="right">
+                        <% if (user) { %>
+                        <a href="/" class="auth">Home</a>
+                        <a href="/users" class="auth">Profile</a>
+                        <a href="/logout" class="auth">Log Out</a>
+                        <% } else { %>
+                        <a href="/auth/google" class="auth">Login</a>
+                        <% } %>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div id="form-wrapper">
         <h1 class="hero-title">Add New Review</h1>
         <!-- < % if (user._id.equals(user && user._id)) { %> -->
@@ -12,13 +39,14 @@
                     </form>
                     <div>
                         <h3>Result:</h3>
+                        <% books.forEach(function(b)) { %>
                         <form action="">
                             <div><input type="radio">Book 1</div>
                             <div><input type="radio">Book 2</div>
                         </form>
                     </div>
                 </div>
-                
+                    <% } %>
                 <form id="new-book" action="/entries" method="POST">
                     <div class="hero-title">Add Book</div>
                     <label>Title:</label>
@@ -44,5 +72,11 @@
 
             </div> 
     </div>
+		<footer class="clearfix">
+		    <p class="copyright">Copyright 2020</p>
+		    <p class="message">Created with &hearts; by <span class="name">StudioRock</span></p>
+		</footer>
+   </body>
 
-<%- include('../partials/footer.ejs') %>
+   </html>
+
