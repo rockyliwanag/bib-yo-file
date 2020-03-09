@@ -37,6 +37,8 @@ Here is a Heroku link to the app and Trello board for my planning: [bib.lio.file
 
 5. Add function for users to upload book cover art.
 
+6. Sort Fiction/Non-fiction and in Alphabetical order.
+
 
 
 
